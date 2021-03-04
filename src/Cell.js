@@ -9,22 +9,21 @@ export default class Cell extends Component {
     }
   }
   
-
+  handleClick = () => {
+    this.setState({
+      color: '#333'
+    })
+  }
   
   render() {
-    const handleClick = () => {
-        this.setState({
-          color: '#333'
-        })
-      }
     return (
       <div 
-      
-        style={{backgroundColor: this.state.color}}
         className="cell"
-        onClick={handleClick}>
+        style={{backgroundColor: this.state.color}}
+        onClick={this.handleClick}>
       </div>
     )
   }
   
 }
+© 2021 GitHub, Inc.
